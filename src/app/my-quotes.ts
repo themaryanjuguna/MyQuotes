@@ -1,4 +1,6 @@
 export class MyQuotes {
     id!: number;
-    name!: string;
+    author!: string;
+    publisher!: string;
+    quote!: string;
 }
