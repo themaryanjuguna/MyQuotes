@@ -1,22 +1,40 @@
-<p>quote-form works!</p>
-<form class="row g-3">
-    <div class="col-md-4">
-      <label for="author" class="form-label">Author</label>
-      <input type="text" class="form-control" id="author" required>
-      
+<div class="container-fluid">
+  
+  
+  <form (ngSubmit)='submitGoal()'  #quoteForm=ngForm class="row g-3 p-2 p-md-3 border rounded-3 bg-light needs-validation" validate >
+    <h4 class="text-center">Publish your Quote</h4>
+  <hr>
+
+  <div>
+    <textarea class="form-control" id="quote" [(ngModel)]="newQuote.quote" #quote="ngModel" rows="3" placeholder="Type your quote here" name="quote" required></textarea>
+    <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+      <p>Quote is required</p>
     </div>
-    <div class="col-md-4">
-      <label for="publisher" class="form-label">Publisher</label>
-      <input type="text" class="form-control" id="publisher" required>
+
+    <div class="col">
+      <input type="text" class="form-control mt-4" id="author" [(ngModel)]="newQuote.author" name="author" #author='ngModel' placeholder="Author" required>
+
+      <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+        <p>Name is required</p>
+      </div>
+
+      <div>
+      <input type="text" class="form-control mt-4" id="publisher" [(ngModel)]="newQuote.publisher" name="publisher" #publisher='ngModel' placeholder="Publisher" required>
+
+      <div [hidden]="publisher.valid || publisher.pristine" class="alert alert-danger">
+        <p>publisher is required</p>
+        </div>
+
+      <div class="alert alert-success mt-4">
+        <span>Preview: <br></span>
+       {{newQuote.quote}} <br>
+       {{newQuote.author}} <br>
+       {{newQuote.publisher}} <br>
+      </div>
       
-       
-    </div>
-    <div class="col-8">
-      <label for="inspirationquote" class="form-label">Quote</label>
-      <textarea class="form-control" id="inspirationquote" placeholder="Required example textarea" required></textarea>
+  
   
     </div>
-      <div class="col-8">
-      <button class="btn btn-primary" type="submit">Submit form</button>
-    </div>
-  </form>
+      <button class="btn btn-info mt-3" type="submit">Add Quote</button>
+  <form>
+

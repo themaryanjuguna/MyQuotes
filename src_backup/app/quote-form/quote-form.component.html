@@ -1,0 +1,23 @@
+<p>quote-form works!</p>
+<form (ngSubmit)='submitQuote()' #quoteForm='ngForm' class="row g-3">
+    <div class="col-md-4 bg-dark">
+      <label for="author" class="form-label">Author</label>
+      <input type="text" class="form-control" id="author" [(ngmodel)]="newQuote.author" name="author" required>
+      Display {{newQuote.author}}
+      
+    </div>
+    <div class="col-md-4">
+      <label for="publisher" class="form-label">Publisher</label>
+      <input type="text" class="form-control" id="publisher" required>
+      
+       
+    </div>
+    <div class="col-8">
+      <label for="inspirationquote" class="form-label">Quote</label>
+      <textarea class="form-control" id="inspirationquote" placeholder="Type your inspirational quote here" required></textarea>
+  
+    </div>
+      <div class="col-8">
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+  </form>

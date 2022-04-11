@@ -13,7 +13,13 @@ export class MyQuotesComponent implements OnInit {
     {id:1, author:'scoobie Doo',publisher:'Maryanne',quote:'Scoobie Doobie Doo'},
     {id:2,author:'Flinstones',publisher:'Maryanne',quote:'Yaba daba doo'},
     {id:3, author:'Dee Dee',publisher:'Maryanne',quote:'What does this button do'},
-  ]   
+  ];
+  
+  addNewQuote(quote){
+    let quoteLength = this.quote.length;
+    quote.id = quoteLength+1
+    this.myquotes.push(quote)
+  }
 
   constructor() { }
 
