@@ -1,23 +1,19 @@
 # MyQuotes
-## Table of Content
-
-+ [Description](##description)
-+ [Installation](#installation)
-+ [Development server](#dependecies)
-+ [Requirements](#requirements)
-+ [Technology Used](#technology-used)
-+ [Licence](#licence)
-+ [Authors Info](#authors-info)
-
-
-## Author Details
-Maryanne Njuguna Find me on Twitter and Linkedin `@themaryanjuguna` `[Linktree Profile](https://linktr.ee/themaryanjuguna)`
 
 # Description
 MyQuotes is an application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational.
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
+
+## Behaviour Driven Development (BDD)
+
+| Input                        | Ouput                                                                                            |
+|--------------------------    |----------------------------------------------------------------------------------------------    |
+| User clicks Post  Quote     | Quote form displays with input fields for Author, Publisher                  |
+| User Clicks Delete           | The quote is purged from view             |
+| User clicks Upvote        |   upvote is incremented value by   1 on each click      |
+| User clicks Downvote     | downvote is increment value by 1 on each click     |
 
 ## Development server
 
@@ -42,3 +38,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Author Details
+Maryanne Njuguna Find me on Twitter and Linkedin `@themaryanjuguna` `[Linktree Profile](https://linktr.ee/themaryanjuguna)`
