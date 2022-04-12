@@ -1,36 +1,46 @@
+<header class="bd-header bg-dark py-3 d-flex align-items-stretch border-bottom border-primary">
+  <div class="container-fluid d-flex align-items-center">
+    <h1 class="d-flex align-items-center fs-2 text-white mb-0">
+      MyQuotes
+    </h1>
+  </div>
+</header>
+
+
 <div class="container-md mx-auto p-3 py-md-5">
-    <div class="row">
-        <h1 class="display-6">Memorable Cartoon Characters Quotes</h1>
-        <hr hr class="mb-5">
-        <div class="col-md-4">
-            <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-
-        </div>
-        <div class="col-md-8">
-
-<table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Author</th>
-        <th>Publisher</th>
-        <th>Quotes</th>
-        <th>Votes</th>
-      </tr>    
-    </thead>
-    <tbody> 
-      <tr *ngFor='let quotes of quotes'>
-        <td>{{ quotes.author }}</td> 
-        <td>{{ quotes.publisher }}</td> 
-        <td>{{ quotes.quote }} <br>Published: {{quotes.publishDate|date: 'medium'}} </td>
-         <td>
-          <app-vote></app-vote>
-        </td>
-      </tr> 
-      <tr>
-    </tr>
-    </tbody> 
-    
-  </table>
-        </div>
+  <div class="row">
+    <div class="col-md-5">
+      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
+    <div class="col-md-7">
+      <div class="card border-success mb-3 mx-4 text-center" *ngFor="let quotes of quotes">
+          <div class="card-header">
+            {{ quotes.publisher }}
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Quote No: {{ quotes.id }}</h5>
+            <blockquote class="blockquote mb-0">
+              <p>"{{ quotes.quote }}"</p>
+              <footer class="blockquote-footer">
+                <cite title="Source Title">{{ quotes.author }}</cite>
+              </footer>
+            </blockquote>
+            <p class="m-3"><app-vote (isComplete)="($event)"></app-vote></p>
+          </div>
+          <div class="card-footer text-muted">
+            Published: {{ quotes.publishDate | date: "medium" }}
+          </div>        
+      </div>
+    </div>
+    
+  </div>
 </div>
+
+<footer class="bg-light text-center p-5">
+  <p>Template built for <a href="#">Maryanne Njuguna</a> by <a href="https://twitter.com/themaryanjuguna">@themaryanjuguna</a>.</p>
+  <p>
+    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+      <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+    </svg><a href="#"> Back to top</a>
+  </p>
+</footer>

@@ -1,40 +1,85 @@
 <div class="container-fluid">
-  
-  
-  <form (ngSubmit)='submitGoal()'  #quoteForm=ngForm class="row g-3 p-2 p-md-3 border rounded-3 bg-light needs-validation" validate >
-    <h4 class="text-center">Publish your Quote</h4>
-  <hr>
+  <form
+    (ngSubmit)="submitGoal()"
+    #quoteForm="ngForm"
+    class="row g-3 p-2 p-md-3 border rounded-3 bg-light needs-validation"
+    validate
+  >
+    <h4 class="text-center text-dark">Publish your Quote</h4>
+    <hr />
 
-  <div>
-    <textarea class="form-control" id="quote" [(ngModel)]="newQuote.quote" #quote="ngModel" rows="3" placeholder="Type your quote here" name="quote" required></textarea>
-    <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
-      <p>Quote is required</p>
-    </div>
+    <div class="form-floating">
+      <textarea
+        class="form-control"
+        id="quote"
+        [(ngModel)]="newQuote.quote"
+        #quote="ngModel"
+        rows="3"
+        placeholder="Type your quote here"
+        name="quote"
+        rows="3"
+        required
+      ></textarea>
+      <label for="floatingInput">Type your quote here</label>
 
-    <div class="col">
-      <input type="text" class="form-control mt-4" id="author" [(ngModel)]="newQuote.author" name="author" #author='ngModel' placeholder="Author" required>
-
-      <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
-        <p>Name is required</p>
+      <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+        <p>Quote is required</p>
       </div>
 
-      <div>
-      <input type="text" class="form-control mt-4" id="publisher" [(ngModel)]="newQuote.publisher" name="publisher" #publisher='ngModel' placeholder="Publisher" required>
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control mt-4"
+          id="author"
+          [(ngModel)]="newQuote.author"
+          name="author"
+          #author="ngModel"
+          placeholder="Author"
+          autocomplete="off"
+          required
+        />
+        <label for="floatingInput">Author</label>
 
-      <div [hidden]="publisher.valid || publisher.pristine" class="alert alert-danger">
-        <p>publisher is required</p>
+        <div
+          [hidden]="author.valid || author.pristine"
+          class="alert alert-danger"
+        >
+          <p>Name is required</p>
         </div>
 
-      <div class="alert alert-success mt-4">
-        <span>Preview: <br></span>
-       {{newQuote.quote}} <br>
-       {{newQuote.author}} <br>
-       {{newQuote.publisher}} <br>
-      </div>
-      
-  
-  
-    </div>
-      <button class="btn btn-info mt-3" type="submit">Add Quote</button>
-  <form>
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control mt-4"
+            id="publisher"
+            [(ngModel)]="newQuote.publisher"
+            name="publisher"
+            #publisher="ngModel"
+            placeholder="Publisher"
+            autocomplete="off"
+            required
+          />
+          <label for="floatingInput">Publisher</label>
 
+          <div
+            [hidden]="publisher.valid || publisher.pristine"
+            class="alert alert-danger"
+          >
+            <p>publisher is required</p>
+          </div>
+
+          <div class="alert alert-success mt-4">
+            <span>Preview: <br /></span>
+            {{ newQuote.quote }} <br />
+            {{ newQuote.author }} <br />
+            {{ newQuote.publisher }} <br />
+          </div>
+        </div>
+        <button class="btn btn-info mt-3 text-white" type="submit">
+          POST QUOTE
+        </button>
+        <form></form>
+      </div>
+    </div>
+  </form>
+</div>
