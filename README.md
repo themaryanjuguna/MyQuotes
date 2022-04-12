@@ -1,4 +1,21 @@
 # MyQuotes
+## Table of Content
+
++ [Description](##description)
++ [Installation](#installation)
++ [Development server](#dependecies)
++ [Requirements](#requirements)
++ [Technology Used](#technology-used)
++ [Licence](#licence)
++ [Authors Info](#authors-info)
+
+
+## Author Details
+Maryanne Njuguna Find me on Twitter and Linkedin `@themaryanjuguna` `[Linktree Profile](https://linktr.ee/themaryanjuguna)`
+
+# Description
+MyQuotes is an application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational.
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
 

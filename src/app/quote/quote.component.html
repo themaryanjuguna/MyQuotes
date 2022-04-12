@@ -20,13 +20,14 @@
     <tbody> 
       <tr *ngFor='let quotes of quotes'>
         <td>{{ quotes.author }}</td> 
-        <td>{{ quotes.publisher }} 
-        </td> 
+        <td>{{ quotes.publisher }}</td> 
         <td>{{ quotes.quote }} <br>Published: {{quotes.publishDate|date: 'medium'}} </td>
-        <td>
+         <td>
           <app-vote></app-vote>
         </td>
       </tr> 
+      <tr>
+    </tr>
     </tbody> 
     
   </table>

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Quotes } from '../quotes';
 
+
 @Component({
   selector: 'app-quote',
   templateUrl: './quote.component.html',
@@ -9,11 +10,9 @@ import { Quotes } from '../quotes';
 export class QuoteComponent implements OnInit {
 
   quotes:Quotes[] =[
-    new Quotes(1,'Flinstones','Maryanne','I Yabba Dabba Do', new Date),
-    new Quotes(1,'Scoobi Doo','Maryanne','Scoobie Doobie Doo', new Date),
-    new Quotes(1,'Johnny Bravo','Maryanne','Hello Ma!', new Date),
-    new Quotes(1,'The Mask','Maryanne','Smokin', new Date),
-
+    new Quotes(1,'Huey Freeman','Maryanne','Being the bigger man is overrated.', new Date),
+    new Quotes(1,'Earthgirl, The Incredibles.','Maryanne','Your identity is your most valuable possession. Protect it.', new Date),
+    new Quotes(1,'Eeyore','Maryanne','A little consideration, a little thought for others, makes all the difference', new Date),
 
 
     // {id:1, author:'Flinstones',publisher:'Maryanne',quote:'yaba daba doo',},
