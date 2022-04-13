@@ -10,13 +10,13 @@ import { Quotes } from '../quotes';
   styleUrls: ['./quote-form.component.css']
 })
 export class QuoteFormComponent implements OnInit {
-  @Output() addQuote = new EventEmitter<Quotes>();
+  @Output() addNewQuote = new EventEmitter<Quotes>();
 
   newQuote = new Quotes(0, "", "","", new Date)
   isComplete: any;
 
   submitGoal() {
-    this.addQuote.emit(this.newQuote);
+    this.addNewQuote.emit(this.newQuote);
   }
   
   

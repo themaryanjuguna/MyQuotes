@@ -1,4 +1,4 @@
-<header class="bd-header bg-success py-3 d-flex align-items-stretch border-bottom border-primary">
+<header class="bd-header bg-success py-3 d-flex align-items-stretch border-bottom border-dark">
   <div class="container-fluid d-flex align-items-center">
     <h1 class="d-flex align-items-center fs-2 text-white mb-0">
       MyQuotes
@@ -6,7 +6,7 @@
   </div>
 </header>
 
-<header class="py-5 border-bottom border-dark bg-light mb-5">
+<header class="py-5 border-bottom border-success bg-light mb-5">
   <div class="container pt-md-1 pb-md-4">
     <div class="row">
       <div class="col-xl-8">
@@ -27,7 +27,7 @@
 <div class="container-md mx-auto p-3 py-md-5">
   <div class="row">
     <div class="col-md-5 mb-5">
-      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+      <app-quote-form (addNewQuote)="addNewQuote($event)"></app-quote-form>
     </div>
     <div class="col-md-7">
       <div class="card border-success mb-5 mx-4 text-center" *ngFor="let quotes of quotes">
@@ -57,8 +57,8 @@
 <footer id="footer" class="bg-light border-top border-success text-center p-5">
   <p>Template built for <a href="https://linktr.ee/themaryanjuguna" target="_blank">Maryanne Njuguna</a> by <a href="https://twitter.com/themaryanjuguna" target="_blank">@themaryanjuguna</a>.</p>
   <p>
-    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
       <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
-    </svg><a href="#"> Back to top</a>
+    </svg>  Back to top</a>
   </p>
 </footer>
