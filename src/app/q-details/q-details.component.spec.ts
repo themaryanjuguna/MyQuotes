@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VoteComponent } from './vote.component';
+import { QDetailsComponent } from './q-details.component';
 
-describe('VoteComponent', () => {
-  let component: VoteComponent;
-  let fixture: ComponentFixture<VoteComponent>;
+describe('QDetailsComponent', () => {
+  let component: QDetailsComponent;
+  let fixture: ComponentFixture<QDetailsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VoteComponent ]
+      declarations: [ QDetailsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(VoteComponent);
+    fixture = TestBed.createComponent(QDetailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

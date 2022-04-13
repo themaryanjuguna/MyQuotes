@@ -33,9 +33,26 @@ export class QuoteComponent implements OnInit {
     this.quotes.push(quote);
   }
 
-  deleteQuote(){
-    this['isComplete'].emit();
+  // deleteQuote(){
+  //   this['isComplete'].emit();
+  // }
+
+
+  [x: string]: any;
+
+  numberOfLikes : number = 0;
+
+  likeButtonClick(){
+    this.numberOfLikes++;
   }
+
+  dislikeButtonClick(){
+    this.numberOfLikes--;
+  }
+  deleteQuote(i: number){
+    this.quotes.splice(i, 1)
+  }
+
 
   
   constructor() { }

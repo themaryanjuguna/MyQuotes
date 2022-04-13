@@ -6,16 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
 import { QuoteFormComponent } from "./quote-form/quote-form.Component";
-import { VoteComponent } from './vote/vote.component';
 import { DateAgoPipe } from './dateAgo.pipe';
+import { QDetailsComponent } from './q-details/q-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuoteComponent,
     QuoteFormComponent,
-    VoteComponent,
     DateAgoPipe,
+    QDetailsComponent,
 
   ],
   imports: [
