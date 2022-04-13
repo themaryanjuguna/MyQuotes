@@ -1,7 +1,7 @@
-# MyQuotes
+# MyQuotes Web App
 
-# Description
-MyQuotes is an application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational.
+## Description
+MyQuotes is an web application where users key in their favouritequotes from various cartoon characters. The published quotes can be voted for by other users whether they are'not so' inspirational or they are indeed inspiring to them.
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
@@ -40,4 +40,4 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 ## Author Details
-Maryanne Njuguna Find me on Twitter and Linkedin `@themaryanjuguna` `[Linktree Profile](https://linktr.ee/themaryanjuguna)`
+Maryanne Njuguna Find me on Twitter and Linkedin `@themaryanjuguna | Linktree Profile`(https://linktr.ee/themaryanjuguna)
