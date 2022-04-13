@@ -3,6 +3,7 @@ import { Quotes } from '../quotes';
 
 
 
+
 @Component({
   selector: 'app-quote',
   templateUrl: './quote.component.html',
@@ -31,8 +32,12 @@ export class QuoteComponent implements OnInit {
     quote.id = quoteLength + 1;
     this.quotes.push(quote);
   }
-  
 
+  deleteQuote(){
+    this['isComplete'].emit();
+  }
+
+  
   constructor() { }
 
   ngOnInit(): void {

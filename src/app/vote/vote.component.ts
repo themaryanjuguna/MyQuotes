@@ -24,17 +24,14 @@ export class VoteComponent {
     this.numberOfLikes--;
   }
 
-  deleteQuote(complete :boolean){
-    this['isComplete'].emit();
   
-
-  // deleteQuote(isComplete: any, index: number){
-  //   if(isComplete){
-  //     let toDelete = confirm(`Are you sure you want to delete ${this['quotes'][index].author} ?`);
-  //     if (toDelete){
-  //     this['quotes'].splice(index, 1)
+   deleteQuote(isComplete: any, index: number){
+    if(isComplete){
+    let toDelete = confirm(`Are you sure you want to delete ${this['quotes'][index].author} ?`);
+    if (toDelete){
+    this['quotes'].splice(index, 1)
   
       }
     }
- 
-
+  }
+  }
