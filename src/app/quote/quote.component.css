@@ -1,0 +1,6 @@
+#quoteForm, #quoteDisplay{
+    height: 110vh;
+    padding-top: 20px;
+    overflow: auto;
+    -ms-overflow-style: none;
+}

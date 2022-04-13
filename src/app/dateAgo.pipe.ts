@@ -8,14 +8,18 @@ export class DateAgoPipe implements PipeTransform {
 
   transform(value: any): number {
     let today:Date = new Date();
-    let nowTime:any = new Date(today.getFullYear(), (today.getMonth()), today.getDate());
-    var timeDifference  = Math.abs(value - nowTime);
-    var secondCounter =  (timeDifference * 0.001)/ 86400;
+    let todayWithNoTime:any = new Date(today.getFullYear(),today.getMonth(),today.getDate())
+    var dateDifference =Math.abs(todayWithNoTime - value)
+    const secondsInADay= 10000;
 
-    if(secondCounter >= 1){
-      return secondCounter;
+    var dateDifferenceSeconds=dateDifference*0.001; 
+    var dateCounter = dateDifferenceSeconds/secondsInADay;
+
+    if (dateCounter >= 1 && todayWithNoTime > value){
+        return dateCounter;
     }else{
-      return 0;
+        return 0;
+        
     }
 
   }

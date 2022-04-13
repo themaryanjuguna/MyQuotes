@@ -14,7 +14,7 @@
         </div>
         <div class="card-footer text-muted">
           <div class="col">
-            Posted: {{ quotes.fullDate | dateAgo }} day(s) ago
+            Posted: {{ quotes.postDate | date: 'short' }}
           </div>
         </div>        
     </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Validators } from '@angular/forms';
 import { Quotes } from '../quotes';
 
 
@@ -26,6 +27,12 @@ export class QuoteFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    this.form = this.quoteForm({
+      quoteArea: [null, [Validators.required]],
+      author: [null, [Validators.required]],
+      publisher: [null, [Validators.required]],
+  })
   }
 
 }

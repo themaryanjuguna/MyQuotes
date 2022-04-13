@@ -17,9 +17,9 @@ export class QuoteComponent implements OnInit {
 
 
   quotes= [
-    new Quotes(1, 'Huey Freeman', 'Maryanne', 'Being the bigger man is overrated.', new Date),
-    new Quotes(2, 'Earthgirl, The Incredibles.', 'Maryanne', 'Your identity is your most valuable possession. Protect it.', new Date),
-    new Quotes(3, 'Eeyore', 'Maryanne', 'A little consideration, a little thought for others, makes all the difference', new Date),
+    new Quotes(1, 'Huey Freeman', 'Maryanne', 'Being the bigger man is overrated.', new Date(8,2,2004)),
+    new Quotes(2, 'Earthgirl, The Incredibles.', 'Maryanne', 'Your identity is your most valuable possession. Protect it.', new Date(4,5,2009)),
+    new Quotes(3, 'Eeyore', 'Maryanne', 'A little consideration, a little thought for others, makes all the difference', new Date(3,1,2009)),
 
 
     // {id:1, author:'Flinstones',publisher:'Maryanne',quote:'yaba daba doo',},
@@ -27,9 +27,15 @@ export class QuoteComponent implements OnInit {
     // {id:3,author:'Messi',publisher:'Maryanne',quote:'bala bala boom boom'},
   ];
 
+
+  mostCount!: number;
+  leastCount!:number
+  counter!: number;
+
   addNewQuote(quote: Quotes) {
     let quoteLength = this.quotes.length;
     quote.id = quoteLength + 1;
+    quote.postDate = new Date(quote.postDate)
     this.quotes.push(quote);
   }
 
@@ -52,6 +58,18 @@ export class QuoteComponent implements OnInit {
   deleteQuote(i: number) {
     this.quotes.splice(i, 1)
   }
+
+  highestUpvote(){
+    this.mostCount = 0
+    this.leastCount = 0
+
+  
+
+    
+  }
+
+
+  
 
 
 

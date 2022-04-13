@@ -1,9 +1,13 @@
 export class Quotes {
-    showDescription: boolean;
-    constructor(public id: number, public author: string, public publisher: string, public quote: string, public fullDate: Date) {
-        this.showDescription = false;
-    }
 
+    public likeButton: number | undefined;
+    public dislikeButton: number | undefined;
+
+    
+    constructor(public id: number, public author: string, public publisher: string, public quote: string, public postDate: Date) {
+        
+    }
+   
 
     //     id!: number;
     //     author!: string;

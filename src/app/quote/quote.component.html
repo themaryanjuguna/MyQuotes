@@ -1,7 +1,7 @@
 <header
   class="bd-header bg-success py-3 d-flex align-items-stretch border-bottom border-dark"
 >
-  <div class="container-fluid d-flex align-items-center">
+  <div class="cover-container d-flex align-items-center">
     <h1 class="d-flex align-items-center fs-2 text-white mb-0">MyQuotes</h1>
   </div>
 </header>
@@ -50,13 +50,17 @@
 <section id="form">
   <div class="container-md mx-auto p-3 py-md-5">
     <div class="row">
-      <div class="col-md-5 mb-5">
+      <div id="quoteForm" class="col-md-5 mb-5">
         <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
       </div>
-      <div class="col-md-7">
+      <div id="quoteDisplay" class="col-md-7">
         <div class="text-center" *ngFor="let quotes of quotes">
-          <app-q-details [quotes]="quotes"></app-q-details>
+          <app-q-details [quotes]="quotes"></app-q-details>     
+
+
           <div class="bg-light p-3 mx-4 mb-5 border-bottom">
+            <p appHighlight>Highlight me!</p>
+
             <p class="fw-bold">No of Votes: {{ numberOfLikes }}</p>
             <button
               (click)="likeButtonClick()"
@@ -136,13 +140,13 @@
 </section>
 
 <footer id="footer" class="bg-light border-top border-success text-center p-5">
-  <p>
-    Template built for
-    <a href="https://linktr.ee/themaryanjuguna" target="_blank"
+  <p class="text-success">
+    Designed by:
+    <a class="text-success" href="https://linktr.ee/themaryanjuguna" target="_blank"
       >Maryanne Njuguna</a
     >
     by
-    <a href="https://twitter.com/themaryanjuguna" target="_blank"
+    <a class="text-success" href="https://twitter.com/themaryanjuguna" target="_blank"
       >@themaryanjuguna</a
     >.
   </p>
