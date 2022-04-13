@@ -1,7 +1,7 @@
 <div class="container-fluid">
-    <div class="card border-success mb-5 mx-4 text-center">
+    <div class="card border-success text-center">
         <div class="card-header">
-          {{ quotes.publisher }}
+          Posted by: {{ quotes.publisher }}
         </div>
         <div class="card-body">
           <h5 class="card-title">Quote No: {{ quotes.id }}</h5>
@@ -14,10 +14,7 @@
         </div>
         <div class="card-footer text-muted">
           <div class="col">
-            Posted: {{ quotes.fullDate | dateAgo | number: "1.0-1" }} day(s) ago
-          </div>
-          <div class="col">
-            <button class="btn btn-primary btn-sm">mnmnm</button>
+            Posted: {{ quotes.fullDate | dateAgo }} day(s) ago
           </div>
         </div>        
     </div>

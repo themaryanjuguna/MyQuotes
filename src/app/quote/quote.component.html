@@ -17,7 +17,7 @@
           their names in the authors panel and of course your name in the
           publishers panel.
         </p>
-        <p>
+        <p class="fw-bold">
           Thanks for taking part
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -54,9 +54,9 @@
         <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
       </div>
       <div class="col-md-7">
-        <div class="mb-5 text-center" *ngFor="let quotes of quotes">
+        <div class="text-center" *ngFor="let quotes of quotes">
           <app-q-details [quotes]="quotes"></app-q-details>
-          <div>
+          <div class="bg-light p-3 mx-4 mb-5 border-bottom">
             <p class="fw-bold">No of Votes: {{ numberOfLikes }}</p>
             <button
               (click)="likeButtonClick()"
